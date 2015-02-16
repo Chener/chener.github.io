@@ -4,17 +4,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: 编程 | 陈二的世界</title>
+  <title>《Eloquent Javascript》阅读（介绍以及第一二章） | 陈二的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="使用javascript的相关框架总感觉很疲惫，拜读大作，恍然大悟。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="陈二的世界">
-<meta property="og:url" content="http://chener.me/categories/编程/">
+<meta property="og:title" content="《Eloquent Javascript》阅读（介绍以及第一二章）">
+<meta property="og:url" content="http://chener.me/eloquent-javascript/">
 <meta property="og:site_name" content="陈二的世界">
-<meta property="og:description">
+<meta property="og:description" content="使用javascript的相关框架总感觉很疲惫，拜读大作，恍然大悟。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陈二的世界">
-<meta name="twitter:description">
+<meta name="twitter:title" content="《Eloquent Javascript》阅读（介绍以及第一二章）">
+<meta name="twitter:description" content="使用javascript的相关框架总感觉很疲惫，拜读大作，恍然大悟。">
 
   
   
@@ -66,9 +66,7 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-eloquent-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-eloquent-javascript" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/eloquent-javascript/" class="article-date">
   <time datetime="2015-02-16T07:57:45.000Z" itemprop="datePublished">2月 16 2015</time>
@@ -85,8 +83,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/eloquent-javascript/">《Eloquent Javascript》阅读（介绍以及第一二章）</a>
+    <h1 class="article-title" itemprop="name">
+      《Eloquent Javascript》阅读（介绍以及第一二章）
     </h1>
   
 
@@ -95,8 +93,56 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>使用javascript的相关框架总感觉很疲惫，拜读大作，恍然大悟。</p>
+<a id="more"></a>
+<p><a href="http://eloquentjavascript.net/" target="_blank" rel="external">原版图书在线地址</a></p>
+<p>因为基础不牢靠，在写javascript相关的代码中总避免不了问谷歌，一来二去，难以集中，疲惫不堪。所以还是那句话，最好的捷径就是老老实实走“弯路”，每天一两章，坚持就是胜利。由于翻译水平以及时间限制，只能翻译下每章的总结来进行复习。建议通读介绍（Introduction）部分。</p>
+<hr>
+<blockquote>
+<h3 id="Chapter_1">Chapter 1</h3>
+<h4 id="Values,_Types,_and_Operators">Values, Types, and Operators</h4>
+<p>We looked at four types of JavaScript values in this chapter: numbers, strings, Booleans, and undefined values.</p>
+<p>Such values are created by typing in their name (true, null) or value (13, “abc”). You can combine and transform values with operators. We saw binary operators for arithmetic (+, -, *, /, and %), string concatenation (+), comparison (==, !=, ===, !==, &lt;, &gt;, &lt;=, &gt;=), and logic (&amp;&amp;, ||), as well as several unary operators (- to negate a number, ! to negate logically, and typeof to find a value’s type) and a ternary operator (?:) to pick one of two values based on a third value.</p>
+<p>This gives you enough information to use JavaScript as a pocket calculator, but not much more. The next chapter will start tying these expressions together into basic programs.</p>
+<h3 id="第一章">第一章</h3>
+<h4 id="值，类型以及操作符">值，类型以及操作符</h4>
+<p>在这章，我们了解了JavaScript中四种类型的值：数字（<code>number</code>），字符串（<code>string</code>），布尔值（<code>boolean</code>）以及未定义值（<code>undefined value</code>）。</p>
+<p>以上这些值（译者注：不是变量）是通过输入他们的名字（<code>true</code>，<code>null</code>）或者值（<code>13</code>，<code>&quot;abc&quot;</code>）来表现的。你可以用操作符来改变这些值。</p>
+<p>我们接触了不少双操作符（<code>binary operators</code>）：</p>
+<ul>
+<li>数学计算符（<code>+</code>，<code>-</code>，<code>*</code>，<code>/</code>，<code>%</code>）</li>
+<li>字符串拼接符（<code>+</code>）</li>
+<li>比较符（<code>==</code>，<code>!=</code>，<code>===</code>，<code>!==</code>，<code>&lt;</code>，<code>&gt;</code>，<code>&lt;=</code>，<code>&gt;=</code>）</li>
+<li>逻辑运算符（<code>&amp;&amp;</code>，<code>||</code>）</li>
+</ul>
+<p>也接触了几个单操作符：</p>
+<ul>
+<li><code>-</code>表示负数</li>
+<li><code>!</code>进行逻辑上的否定</li>
+<li><code>typeof</code>得到值的类型</li>
+</ul>
+<p>以及一个三操作符：</p>
+<ul>
+<li><code>? :</code>第一个值的真假与否决定取后面两值中的哪个值</li>
+</ul>
+<p>这些基础知识足以让你将JavaScript当做一个迷你计算器了，但也只能如此。下一章将开始把这些表达式融入到基础程序中。</p>
+</blockquote>
+<hr>
+<blockquote>
+<h3 id="Chapter_2">Chapter 2</h3>
+<h4 id="Program_Structure">Program Structure</h4>
+<p>You now know that a program is built out of statements, which themselves sometimes contain more statements. Statements tend to contain expressions, which themselves can be built out of smaller expressions.</p>
+<p>Putting statements after one another gives you a program that is executed from top to bottom. You can introduce disturbances in the flow of control by using conditional (if, else, and switch) and looping (while, do, and for) statements.</p>
+<p>Variables can be used to file pieces of data under a name, and they are useful for tracking state in your program. The environment is the set of variables that are defined. JavaScript systems always put a number of useful standard variables into your environment.</p>
+<p>Functions are special values that encapsulate a piece of program. You can invoke them by writing functionName(argument1, argument2). Such a function call is an expression, and may produce a value.</p>
+<h3 id="第二章">第二章</h3>
+<h4 id="程序构成">程序构成</h4>
+<p>现在你应该知道了一个程序是建立在语句的基础之上的，而语句自己有时候还包含了子语句，子子孙孙可无穷尽也。语句一般包括表达式，而表达式也同样包含子表达式。</p>
+<p>将一个语句放在另一个语句后面就形成了一个从头到尾执行的程序。你可以通过判断（<code>if</code>，<code>else</code>，<code>switch</code>）和循环语句（<code>while</code>，<code>do</code>，<code>for</code>）来打乱这种流程控制（<code>flow of control</code>）。</p>
+<p>变量可以以一个名字的形式存储一些数据，这些变量很利于跟踪程序状态。环境即一个包括很多已定义变量的集合。JavaScript的系统（译者注：应该是运行环境）总是会在你的程序环境中嵌入很多有用的标准变量。</p>
+<p>函数是一种概括一段程序的特殊值。你可以通过<code>functionName(argument1, argument2)</code>来调用他们。这样的一个函数调用也是一个表达式，其可能会返回一个值。</p>
+</blockquote>
+<hr>
 
-        
       
     </div>
     <footer class="article-footer">
@@ -114,161 +160,24 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hexo-blog-on-github-with-independent-domain" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/hexo-blog-on-github-with-independent-domain/" class="article-date">
-  <time datetime="2015-02-11T12:35:04.000Z" itemprop="datePublished">2月 11 2015</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程/">编程</a>►<a class="article-category-link" href="/categories/编程/搭建/">搭建</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/hexo-blog-on-github-with-independent-domain/">搭建github上独立域名的hexo博客</a>
-    </h1>
+    <a href="/no-easy-way/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">捷径与弯路</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>突然想系统的记录生活。</p>
-
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://chener.me/hexo-blog-on-github-with-independent-domain/" data-id="vwfuv67uwh1k4zcq" class="article-share-link" data-share="baidu">分享到</a>
-      
-
-      
-        <a href="http://chener.me/hexo-blog-on-github-with-independent-domain/#ds-thread" class="article-comment-link">评论</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
 
-  
-    <article id="post-set-android-studio-for-phonegap" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/set-android-studio-for-phonegap/" class="article-date">
-  <time datetime="2015-02-11T12:28:17.000Z" itemprop="datePublished">2月 11 2015</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程/">编程</a>►<a class="article-category-link" href="/categories/编程/搭建/">搭建</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/set-android-studio-for-phonegap/">搭建androidstudio上phonegap开发环境</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>工欲善其器，必先利其器。</p>
-
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://chener.me/set-android-studio-for-phonegap/" data-id="lp72k0du83fy48wx" class="article-share-link" data-share="baidu">分享到</a>
-      
-
-      
-        <a href="http://chener.me/set-android-studio-for-phonegap/#ds-thread" class="article-comment-link">评论</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/androidstudio/">androidstudio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/phonegap/">phonegap</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-run-shadowsockets-on-digitalocean" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/run-shadowsockets-on-digitalocean/" class="article-date">
-  <time datetime="2015-02-11T12:25:52.000Z" itemprop="datePublished">2月 11 2015</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程/">编程</a>►<a class="article-category-link" href="/categories/编程/搭建/">搭建</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/run-shadowsockets-on-digitalocean/">在digitalocean上使用shadowsockets科学上网</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近gtw越来越给力，goganet几近瘫痪，只有自己搭梯子咯。</p>
-
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://chener.me/run-shadowsockets-on-digitalocean/" data-id="76kmexcsmokluiva" class="article-share-link" data-share="baidu">分享到</a>
-      
-
-      
-        <a href="http://chener.me/run-shadowsockets-on-digitalocean/#ds-thread" class="article-comment-link">评论</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/digitalocean/">digitalocean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsockets/">shadowsockets</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="eloquent-javascript/" data-title="《Eloquent Javascript》阅读（介绍以及第一二章）" data-url="http://chener.me/eloquent-javascript/"></div>
+  </section>
 </section>
       
       <aside id="sidebar">
