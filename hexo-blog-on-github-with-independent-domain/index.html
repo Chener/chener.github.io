@@ -95,8 +95,12 @@
         <p>突然想系统的记录生活。</p>
 <a id="more"></a>
 <p>以下均为草稿，待补充。</p>
-<p>hexo version 2.8.3<br>暂时不要更新到<code>hexo 3+</code>因为变化比较大，相应文档和教程都还没有到位，在部署使用上会很不方便。</p>
-<p>hexo s<br>只是本地，不需要<code>hexo g</code>同时只有主题的<code>_config.yml</code>的变化才能及时更新，站点的<code>_config.yml</code>必须要<code>hexo g</code>后才能显示更新。</p>
+<p><code>hexo version 2.8.3</code><br>暂时不要更新到<code>hexo 3+</code>因为变化比较大，相应文档和教程都还没有到位，在部署使用上会很不方便。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure>
+
+<p>只是本地，不需要<code>hexo g</code>同时只有主题的<code>_config.yml</code>的变化才能及时更新，站点的<code>_config.yml</code>必须要<code>hexo g</code>后才能显示更新。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d -g</div></pre></td></tr></table></figure>
+
 <p>Disqus<br><a href="https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-" target="_blank" rel="external">什么是</a><code>short name</code><br><a href="https://disqus.com/admin/create/" target="_blank" rel="external">获取</a><code>short name</code>（当然首先得注册Disqus）<br>国内的<a href="http://duoshuo.com/create-site/" target="_blank" rel="external">多说</a>同理。</p>
 <p>favicon:<br>详见<code>themes/landscape/layout/_partial/post/head.ejs</code>（<code>hexo</code>2.8.3版本默认主题<code>landscape</code>）：</p>
 <figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link <span class="variable">rel=</span><span class="string">"icon"</span> <span class="variable">href=</span><span class="string">"&lt;%- theme.favicon %&gt;"</span>&gt;</div></pre></td></tr></table></figure>
