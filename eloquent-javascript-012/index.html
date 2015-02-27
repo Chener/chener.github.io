@@ -6,15 +6,15 @@
   
   <title>《Eloquent Javascript》阅读（介绍以及第一二章） | 陈二的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用javascript的相关框架总感觉很疲惫，拜读大作，恍然大悟。">
+  <meta name="description" content="使用 javascript 的相关框架总感觉很疲惫，拜读大作，恍然大悟。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Eloquent Javascript》阅读（介绍以及第一二章）">
-<meta property="og:url" content="http://chener.me/eloquent-javascript/">
+<meta property="og:url" content="http://chener.me/eloquent-javascript-012/">
 <meta property="og:site_name" content="陈二的世界">
-<meta property="og:description" content="使用javascript的相关框架总感觉很疲惫，拜读大作，恍然大悟。">
+<meta property="og:description" content="使用 javascript 的相关框架总感觉很疲惫，拜读大作，恍然大悟。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Eloquent Javascript》阅读（介绍以及第一二章）">
-<meta name="twitter:description" content="使用javascript的相关框架总感觉很疲惫，拜读大作，恍然大悟。">
+<meta name="twitter:description" content="使用 javascript 的相关框架总感觉很疲惫，拜读大作，恍然大悟。">
 
   
   
@@ -66,9 +66,9 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-eloquent-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-eloquent-javascript-012" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/eloquent-javascript/" class="article-date">
+    <a href="/eloquent-javascript-012/" class="article-date">
   <time datetime="2015-02-16T07:57:45.000Z" itemprop="datePublished">2月 16 2015</time>
 </a>
     
@@ -92,10 +92,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用javascript的相关框架总感觉很疲惫，拜读大作，恍然大悟。</p>
+        <p>使用 javascript 的相关框架总感觉很疲惫，拜读大作，恍然大悟。</p>
 <a id="more"></a>
 <p><a href="http://eloquentjavascript.net/" target="_blank" rel="external">原版图书在线地址</a></p>
-<p>因为基础不牢靠，在写javascript相关的代码中总避免不了问谷歌，一来二去，难以集中，疲惫不堪。所以还是那句话，最好的捷径就是老老实实走“弯路”，每天一两章，坚持就是胜利。由于翻译水平以及时间限制，只能翻译下每章的总结来进行复习。建议通读介绍（Introduction）部分。</p>
+<p>因为基础不牢靠，在写 javascript 相关的代码中总避免不了问谷歌，一来二去，难以集中，疲惫不堪。所以还是那句话，最好的捷径就是老老实实走“弯路”，每天一两章，坚持就是胜利。由于翻译水平以及时间限制，只能翻译下每章的总结来进行复习。建议通读介绍（Introduction）部分。</p>
 <hr>
 <blockquote>
 <h3 id="Chapter_1">Chapter 1</h3>
@@ -105,7 +105,7 @@
 <p>This gives you enough information to use JavaScript as a pocket calculator, but not much more. The next chapter will start tying these expressions together into basic programs.</p>
 <h3 id="第一章">第一章</h3>
 <h4 id="值，类型以及操作符">值，类型以及操作符</h4>
-<p>在这章，我们了解了JavaScript中四种类型的值：数字（<code>number</code>），字符串（<code>string</code>），布尔值（<code>boolean</code>）以及未定义值（<code>undefined value</code>）。</p>
+<p>在这章，我们了解了 JavaScript 中四种类型的值：数字（<code>number</code>），字符串（<code>string</code>），布尔值（<code>boolean</code>）以及未定义值（<code>undefined value</code>）。</p>
 <p>以上这些值（译者注：不是变量）是通过输入他们的名字（<code>true</code>，<code>null</code>）或者值（<code>13</code>，<code>&quot;abc&quot;</code>）来表现的。你可以用操作符来改变这些值。</p>
 <p>我们接触了不少双操作符（<code>binary operators</code>）：</p>
 <ul>
@@ -116,13 +116,13 @@
 </ul>
 <p>也接触了几个单操作符：</p>
 <ul>
-<li><code>-</code>表示负数</li>
-<li><code>!</code>进行逻辑上的否定</li>
-<li><code>typeof</code>得到值的类型</li>
+<li><code>-</code> 表示负数</li>
+<li><code>!</code> 进行逻辑上的否定</li>
+<li><code>typeof</code> 得到值的类型</li>
 </ul>
 <p>以及一个三操作符：</p>
 <ul>
-<li><code>? :</code>第一个值的真假与否决定取后面两值中的哪个值</li>
+<li><code>? :</code> 第一个值的真假与否决定取后面两值中的哪个值</li>
 </ul>
 <p>这些基础知识足以让你将JavaScript当做一个迷你计算器了，但也只能如此。下一章将开始把这些表达式融入到基础程序中。</p>
 </blockquote>
@@ -138,8 +138,8 @@
 <h4 id="程序构成">程序构成</h4>
 <p>现在你应该知道了一个程序是建立在语句的基础之上的，而语句自己有时候还包含了子语句，子子孙孙可无穷尽也。语句一般包括表达式，而表达式也同样包含子表达式。</p>
 <p>将一个语句放在另一个语句后面就形成了一个从头到尾执行的程序。你可以通过判断（<code>if</code>，<code>else</code>，<code>switch</code>）和循环语句（<code>while</code>，<code>do</code>，<code>for</code>）来打乱这种流程控制（<code>flow of control</code>）。</p>
-<p>变量可以以一个名字的形式存储一些数据，这些变量很利于跟踪程序状态。环境即一个包括很多已定义变量的集合。JavaScript的系统（译者注：应该是运行环境）总是会在你的程序环境中嵌入很多有用的标准变量。</p>
-<p>函数是一种概括一段程序的特殊值。你可以通过<code>functionName(argument1, argument2)</code>来调用他们。这样的一个函数调用也是一个表达式，其可能会返回一个值。</p>
+<p>变量可以以一个名字的形式存储一些数据，这些变量很利于跟踪程序状态。环境即一个包括很多已定义变量的集合。JavaScript 的系统（译者注：应该是运行环境）总是会在你的程序环境中嵌入很多有用的标准变量。</p>
+<p>函数是一种概括一段程序的特殊值。你可以通过 <code>functionName(argument1, argument2)</code> 来调用他们。这样的一个函数调用也是一个表达式，其可能会返回一个值。</p>
 </blockquote>
 <hr>
 
@@ -147,11 +147,11 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://chener.me/eloquent-javascript/" data-id="g1c4cy24hprpx81k" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://chener.me/eloquent-javascript-012/" data-id="rw3v7v00mj4salqt" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
-        <a href="http://chener.me/eloquent-javascript/#ds-thread" class="article-comment-link">评论</a>
+        <a href="http://chener.me/eloquent-javascript-012/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -167,7 +167,7 @@
       <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">
         
-          github入门指南
+          Github 入门指南
         
       </div>
     </a>
@@ -185,7 +185,7 @@
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="eloquent-javascript/" data-title="《Eloquent Javascript》阅读（介绍以及第一二章）" data-url="http://chener.me/eloquent-javascript/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="eloquent-javascript-012/" data-title="《Eloquent Javascript》阅读（介绍以及第一二章）" data-url="http://chener.me/eloquent-javascript-012/"></div>
   </section>
 </section>
       
@@ -195,7 +195,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/编程/搭建/">搭建</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/阅读/">阅读</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/认知/">认知</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/编程/搭建/">搭建</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/阅读/">阅读</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/认知/">认知</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -204,7 +204,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/androidstudio/" style="font-size: 10.00px;">androidstudio</a><a href="/tags/digitalocean/" style="font-size: 10.00px;">digitalocean</a><a href="/tags/git/" style="font-size: 10.00px;">git</a><a href="/tags/github/" style="font-size: 20.00px;">github</a><a href="/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/joomla/" style="font-size: 10.00px;">joomla</a><a href="/tags/phonegap/" style="font-size: 10.00px;">phonegap</a><a href="/tags/shadowsockets/" style="font-size: 10.00px;">shadowsockets</a><a href="/tags/wordpress/" style="font-size: 10.00px;">wordpress</a>
+      <a href="/tags/androidstudio/" style="font-size: 10.00px;">androidstudio</a><a href="/tags/bash/" style="font-size: 10.00px;">bash</a><a href="/tags/digitalocean/" style="font-size: 10.00px;">digitalocean</a><a href="/tags/git/" style="font-size: 10.00px;">git</a><a href="/tags/github/" style="font-size: 20.00px;">github</a><a href="/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/tags/javascript/" style="font-size: 20.00px;">javascript</a><a href="/tags/joomla/" style="font-size: 10.00px;">joomla</a><a href="/tags/linux/" style="font-size: 10.00px;">linux</a><a href="/tags/phonegap/" style="font-size: 10.00px;">phonegap</a><a href="/tags/shadowsockets/" style="font-size: 10.00px;">shadowsockets</a><a href="/tags/wordpress/" style="font-size: 10.00px;">wordpress</a>
     </div>
   </div>
 
