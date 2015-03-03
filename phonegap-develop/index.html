@@ -101,14 +101,21 @@
 
 <ul>
 <li><a href="http://stackoverflow.com/questions/18174511/is-there-a-difference-between-phonegap-and-cordova-commands" target="_blank" rel="external"><code>CLI</code>: phonegap Vs cordova</a></li>
+<li><a href="http://devgirl.org/2014/04/09/phonegapcordova-cli-adding-plugins/" target="_blank" rel="external">How the above two differ on adding plugin</a></li>
 <li>由于国内 Google play 上不去，国内需登录下载<a href="http://bbs.phonegap100.com/forum.php?mod=attachment&amp;aid=ODA1fGI1YjEwYjU3fDE0MjE4OTczMDF8MHwxMzEy" target="_blank" rel="external">地址</a></li>
 <li>默认端口 <code>3000</code>，默认访问文件 <code>index.html</code>（可使用其 <code>Desktop App（beta）</code> 修改默认设置）。</li>
 <li><code>Phonegap</code> 自带跨域。</li>
-<li><a href="http://docs.phonegap.com/en/4.0.0/config_ref_index.md.html" target="_blank" rel="external">关于 <code>config.xml</code> 的位置</a></li>
+<li><a href="http://docs.phonegap.com/en/4.0.0/config_ref_index.md.html" target="_blank" rel="external">关于 <code>config.xml</code> 的位置</a>，现在一般放在 <code>www/</code> 外。</li>
+<li><code>plugins</code> 不光要在 <code>config.xml</code> 里声明， 还需要在 <code>myApp/</code> 中使用 <code>CLI</code> 输入如 <code>cordova plugin add org.apache.cordova.camera</code>。(待确定)</li>
 <li><code>node</code> 的安装按照步骤一步步来就行，它是一个可供 <code>js</code> 运行的独立环境/引擎，一般 <code>js</code> 都是运行在浏览器提供的引擎上的。<br><a href="https://github.com/appfeel/admob-phonegap-build-demo" target="_blank" rel="external">demo APP</a></li>
+<li>无法使用第三方插件（待确定）</li>
+<li>无法使用 <code>cookie</code> 进行登录，但 <code>phonegap build</code> 可以！</li>
 </ul>
 <h5 id="部署阶段">部署阶段</h5>
 <p><a href="https://build.phonegap.com/" target="_blank" rel="external">Phonegap Build</a></p>
+<ul>
+<li>若没有 <code>config.xml</code> 则默认 <code>phonegap 3.3.0</code> 不是最新版本。（待确定）</li>
+</ul>
 <h5 id="开发">开发</h5>
 <p><a href="http://coenraets.org/blog/phonegap-tutorial/" target="_blank" rel="external">Tutorial: Developing a PhoneGap Application</a><br>因为 <code>Phonegap</code> 后来被 <code>Adobe</code> 收购并捐给了 <code>Apache</code> 并重新命名为 <code>Cordova</code>，所以上面的教程需要一点改动，即在调用设备原生功能的时候需要在 <code>config.xml</code> 里面加上调用，<a href="http://docs.build.phonegap.com/en_US/configuring_plugins.md.html#importing-config" target="_blank" rel="external">相关官方文档</a><br><a href="https://build.phonegap.com/plugins" target="_blank" rel="external"><code>plug-in APIs</code></a><br><code>plugin</code> 的命名为倒置。</p>
 
