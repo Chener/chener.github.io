@@ -94,35 +94,38 @@
       
         <p>捣鼓了不少时间，原来如此简单。</p>
 <a id="more"></a>
-<p>使用 <code>Phonegap</code> + <code>Ionic</code> 开发接近原生 APP 的方式对熟悉前端开发的程序猿是十分友好的，目前我的开发搭建基本不需要 <code>Eclipse</code>，<code>ADT-bundle</code> 以及 <code>Android Studio</code> 之流，前提是不需要 debug 调用封装的原生设备能力（至于 <code>phonegap</code> 插件目前还没有接触）。我是用的是安卓机和 Mac。</p>
+<p>使用 <code>Phonegap</code> + <code>Ionic</code> 开发接近原生 APP 的方式对熟悉前端开发的程序猿是十分友好的，目前我的开发搭建基本不需要 <code>Eclipse</code>，<code>ADT-bundle</code> 以及 <code>Android Studio</code> 之流，前提是不需要特别复杂的 debug 功能（本来 <code>html</code> 部分就可以通过 Chrome 进行 debug）。</p>
 <h5 id="开发阶段">开发阶段</h5>
-<p><a href="http://app.phonegap.com/" target="_blank" rel="external">Phonegap Developer App</a></p>
+<p>两种方式（目前推荐方式二），均要用到<a href="http://app.phonegap.com/" target="_blank" rel="external">Phonegap Developer App</a>。由于国内 Google play 上不去，国内需登录下载<a href="http://bbs.phonegap100.com/forum.php?mod=attachment&amp;aid=ODA1fGI1YjEwYjU3fDE0MjE4OTczMDF8MHwxMzEy" target="_blank" rel="external">地址</a></p>
+<h6 id="方式一：CLI_开发">方式一：CLI 开发</h6>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">phonegap create myApp</div><div class="line"><span class="built_in">cd</span> myApp/</div><div class="line">phonegap serve</div></pre></td></tr></table></figure>
 
 <ul>
+<li><code>node</code> 的安装按照步骤一步步来就行，它是一个可供 <code>js</code> 运行的独立环境/引擎，一般 <code>js</code> 都是运行在浏览器提供的引擎上的。</li>
 <li><a href="http://stackoverflow.com/questions/18174511/is-there-a-difference-between-phonegap-and-cordova-commands" target="_blank" rel="external"><code>CLI</code>: phonegap Vs cordova</a></li>
 <li><a href="http://devgirl.org/2014/04/09/phonegapcordova-cli-adding-plugins/" target="_blank" rel="external">How the above two differ on adding plugin</a></li>
-<li>由于国内 Google play 上不去，国内需登录下载<a href="http://bbs.phonegap100.com/forum.php?mod=attachment&amp;aid=ODA1fGI1YjEwYjU3fDE0MjE4OTczMDF8MHwxMzEy" target="_blank" rel="external">地址</a></li>
-<li>推荐使用 <a href="http://phonegap.com/blog/2014/12/11/phonegap-desktop-app-beta/" target="_blank" rel="external">Desktop App</a>，<code>cli</code> 目前好像有问题。尝试使用 <code>cli</code> 进行 <code>phonegap serve</code> Desktop App 创建的项目仍然有如下错误信息。而使用 Desktop App 导入 <code>cli</code> 用 <code>phonegap create myApp</code> 创建的项目再 serve 的话就没有问题。所以应该是 <code>cli</code> 的 <code>phonegap serve</code> 有问题。</li>
+<li><a href="http://docs.phonegap.com/en/4.0.0/config_ref_index.md.html" target="_blank" rel="external">关于 <code>config.xml</code> 的位置</a>，现在一般放在 <code>www/</code> 外。</li>
 </ul>
+<h6 id="方式二：使用_Phonegap_Desktop_App">方式二：使用 Phonegap Desktop App</h6>
+<p>推荐使用 <a href="http://phonegap.com/blog/2014/12/11/phonegap-desktop-app-beta/" target="_blank" rel="external">Desktop App</a>，<code>cli</code> 目前好像有问题。尝试使用 <code>cli</code> 进行 <code>phonegap serve</code> Desktop App 创建的项目仍然有如下错误信息。而使用 Desktop App 导入 <code>cli</code> 用 <code>phonegap create myApp</code> 创建的项目再 serve 的话就没有问题。所以应该是 <code>cli</code> 的 <code>phonegap serve</code> 有问题。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[phonegap] [console.log] deviceready has not fired after <span class="number">5</span> seconds.</div><div class="line">[phonegap] [console.log] Channel not fired: onCordovaReady</div><div class="line">[phonegap] [console.log] Channel not fired: onFileSystemPathsReady</div><div class="line">[phonegap] [console.log] Channel not fired: onCordovaConnectionReady</div></pre></td></tr></table></figure>
 
 <ul>
 <li>默认端口 <code>3000</code>，默认访问文件 <code>index.html</code>（可使用其 <code>Desktop App（beta）</code> 修改默认设置）。</li>
 <li><code>Phonegap</code> 自带跨域。</li>
-<li><a href="http://docs.phonegap.com/en/4.0.0/config_ref_index.md.html" target="_blank" rel="external">关于 <code>config.xml</code> 的位置</a>，现在一般放在 <code>www/</code> 外。</li>
-<li><code>plugins</code> 不光要在 <code>config.xml</code> 里声明， 还需要在 <code>myApp/</code> 中使用 <code>CLI</code> 输入如 <code>cordova plugin add org.apache.cordova.camera</code>。(待确定)</li>
-<li><code>node</code> 的安装按照步骤一步步来就行，它是一个可供 <code>js</code> 运行的独立环境/引擎，一般 <code>js</code> 都是运行在浏览器提供的引擎上的。<br><a href="https://github.com/appfeel/admob-phonegap-build-demo" target="_blank" rel="external">demo APP</a></li>
-<li>无法使用第三方插件（待确定）</li>
 <li>无法使用 <code>cookie</code> 进行登录，但 <code>phonegap build</code> 可以！</li>
+<li>无法使用第三方插件（待确定）</li>
+<li><code>plugins</code> 不光要在 <code>config.xml</code> 里声明， 还需要在 <code>myApp/</code> 中使用 <code>CLI</code> 输入如 <code>cordova plugin add org.apache.cordova.camera</code>。(待确定-&gt;不需要)</li>
 </ul>
 <h5 id="部署阶段">部署阶段</h5>
 <p><a href="https://build.phonegap.com/" target="_blank" rel="external">Phonegap Build</a></p>
 <ul>
-<li>若没有 <code>config.xml</code> 则默认 <code>phonegap 3.3.0</code> 不是最新版本。（待确定）</li>
+<li>若没有 <code>config.xml</code> 则默认 <code>phonegap 3.3.0</code> 不是最新版本。</li>
 </ul>
 <h5 id="开发">开发</h5>
-<p><a href="http://coenraets.org/blog/phonegap-tutorial/" target="_blank" rel="external">Tutorial: Developing a PhoneGap Application</a><br>因为 <code>Phonegap</code> 后来被 <code>Adobe</code> 收购并捐给了 <code>Apache</code> 并重新命名为 <code>Cordova</code>，所以上面的教程需要一点改动，即在调用设备原生功能的时候需要在 <code>config.xml</code> 里面加上调用，<a href="http://docs.build.phonegap.com/en_US/configuring_plugins.md.html#importing-config" target="_blank" rel="external">相关官方文档</a><br><a href="https://build.phonegap.com/plugins" target="_blank" rel="external"><code>plug-in APIs</code></a><br><code>plugin</code> 的命名为倒置。</p>
+<p><a href="http://ccoenraets.github.io/cordova-tutorial/" target="_blank" rel="external">Tutorial: Developing a PhoneGap Application</a><br><a href="http://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html#Plugin%20APIs" target="_blank" rel="external">Phonegap Events 以及 Plug-in APIs</a>左边目录最下面两个。</p>
+<h5 id="历史">历史</h5>
+<p><code>Phonegap</code> 后来被 <code>Adobe</code> 收购并捐给了 <code>Apache</code> 并重新命名为 <code>Cordova</code>。</p>
 
       
     </div>
