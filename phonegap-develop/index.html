@@ -96,7 +96,7 @@
 <a id="more"></a>
 <p>使用 <code>Phonegap</code> + <code>Ionic</code> 等手机端框架开发接近原生 APP 的方式对熟悉前端开发的程序猿是十分友好的，目前我的开发搭建基本不需要 <code>Eclipse</code>，<code>ADT-bundle</code> 以及 <code>Android Studio</code> 之流，前提是不需要特别复杂的 debug 功能（本来 <code>html</code> 部分就可以通过 Chrome 进行 debug）。</p>
 <h4 id="开发阶段">开发阶段</h4>
-<p>两种方式（目前推荐方式二），均要用到<a href="http://app.phonegap.com/" target="_blank" rel="external">Phonegap Developer App</a>。由于国内 Google play 上不去，国内需登录下载<a href="http://bbs.phonegap100.com/forum.php?mod=attachment&amp;aid=ODA1fGI1YjEwYjU3fDE0MjE4OTczMDF8MHwxMzEy" target="_blank" rel="external">地址</a></p>
+<p>两种方式（目前推荐方式二，安装下就好），均要用到<a href="http://app.phonegap.com/" target="_blank" rel="external">Phonegap Developer App</a>。由于国内 Google play 上不去，国内需登录下载<a href="http://bbs.phonegap100.com/forum.php?mod=attachment&amp;aid=ODA1fGI1YjEwYjU3fDE0MjE4OTczMDF8MHwxMzEy" target="_blank" rel="external">地址</a></p>
 <h6 id="方式一：CLI_开发">方式一：CLI 开发</h6>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">phonegap create myApp</div><div class="line"><span class="built_in">cd</span> myApp/</div><div class="line">phonegap serve</div></pre></td></tr></table></figure>
 
@@ -107,9 +107,7 @@
 <li><a href="http://docs.phonegap.com/en/4.0.0/config_ref_index.md.html" target="_blank" rel="external">关于 <code>config.xml</code> 的位置</a>，现在一般放在 <code>www/</code> 外。</li>
 </ul>
 <h6 id="方式二：使用_Phonegap_Desktop_App">方式二：使用 Phonegap Desktop App</h6>
-<p>推荐使用 <a href="http://phonegap.com/blog/2014/12/11/phonegap-desktop-app-beta/" target="_blank" rel="external">Desktop App</a>，<code>cli</code> 目前好像有问题。尝试使用 <code>cli</code> 进行 <code>phonegap serve</code> Desktop App 创建的项目仍然有如下错误信息。而使用 Desktop App 导入 <code>cli</code> 用 <code>phonegap create myApp</code> 创建的项目再 serve 的话就没有问题。所以应该是 <code>cli</code> 的 <code>phonegap serve</code> 有问题。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[phonegap] [console.log] deviceready has not fired after <span class="number">5</span> seconds.</div><div class="line">[phonegap] [console.log] Channel not fired: onCordovaReady</div><div class="line">[phonegap] [console.log] Channel not fired: onFileSystemPathsReady</div><div class="line">[phonegap] [console.log] Channel not fired: onCordovaConnectionReady</div></pre></td></tr></table></figure>
-
+<p>使用 <a href="http://phonegap.com/blog/2014/12/11/phonegap-desktop-app-beta/" target="_blank" rel="external">Desktop App</a></p>
 <ul>
 <li>默认端口 <code>3000</code>，可使用 <code>Desktop App</code> 修改。</li>
 <li>默认访问文件 <code>index.html</code>，可在 <code>config.xml</code> 里修改。</li>
