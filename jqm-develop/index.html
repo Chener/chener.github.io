@@ -4,17 +4,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: phonegap | 陈二的世界</title>
+  <title>jQuery Mobile 开发 | 陈二的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="jQuery Mobile(以下简称jqm) 其实挺好用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="陈二的世界">
-<meta property="og:url" content="http://chener.me/tags/phonegap/">
+<meta property="og:title" content="jQuery Mobile 开发">
+<meta property="og:url" content="http://chener.me/jqm-develop/">
 <meta property="og:site_name" content="陈二的世界">
-<meta property="og:description">
+<meta property="og:description" content="jQuery Mobile(以下简称jqm) 其实挺好用。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陈二的世界">
-<meta name="twitter:description">
+<meta name="twitter:title" content="jQuery Mobile 开发">
+<meta name="twitter:description" content="jQuery Mobile(以下简称jqm) 其实挺好用。">
 
   
   
@@ -66,62 +66,10 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-update-tlyblOA" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-jqm-develop" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/update-tlyblOA/" class="article-date">
-  <time datetime="2015-03-09T07:44:11.000Z" itemprop="datePublished">3月 9 2015</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程/">编程</a>►<a class="article-category-link" href="/categories/编程/公司/">公司</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/update-tlyblOA/">易百里科技 OA 升级（待）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>安上 <code>Phonegap</code> 的翅膀。</p>
-
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://chener.me/update-tlyblOA/" data-id="daegt3esmc3eg3ak" class="article-share-link" data-share="baidu">分享到</a>
-      
-
-      
-        <a href="http://chener.me/update-tlyblOA/#ds-thread" class="article-comment-link">评论</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquerymobile/">jquerymobile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/phonegap/">phonegap</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-phonegap-develop" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/phonegap-develop/" class="article-date">
-  <time datetime="2015-02-28T03:07:02.000Z" itemprop="datePublished">2月 28 2015</time>
+    <a href="/jqm-develop/" class="article-date">
+  <time datetime="2015-03-12T06:35:50.000Z" itemprop="datePublished">3月 12 2015</time>
 </a>
     
   <div class="article-category">
@@ -135,8 +83,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/phonegap-develop/">Phonegap 开发</a>
+    <h1 class="article-title" itemprop="name">
+      jQuery Mobile 开发
     </h1>
   
 
@@ -144,81 +92,102 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>捣鼓了不少时间，原来如此简单。</p>
+        <p><code>jQuery Mobile</code>(以下简称<code>jqm</code>) 其实挺好用。</p>
+<a id="more"></a>
+<p>对于易百里现阶段团队而言，手机端开发 <code>Phonegap</code> 结合 <code>jqm</code>(v1.4.5) 是最好的方式。<code>Ionic Framework</code> 表现会更好，但要求 <code>Angular.js</code> 基础。有关 <code>Phonegap</code> 的使用，详见<a href="http://chener.me/phonegap-develop/" target="_blank" rel="external">Phonegap 开发</a>。</p>
+<h2 id="jqm_项目文件结构"><code>jqm</code> 项目文件结构</h2>
+<ul>
+<li>目前对多角色系统的权限分配比较原始，采用角色与文件夹对应的方式。</li>
+<li>开发时会有很多”碎片化”的 <code>css``js</code> 文件，PC 端需要在上线时打包提高访问速度，Phone 端貌似不需要（待）。</li>
+<li>欢迎提出修改意见。</li>
+</ul>
+<blockquote>
+<ul>
+<li>css/<ul>
+<li>lib/                        // 公共库或框架提供的 <code>css</code></li>
+<li>images/                // 公共库或框架提供 <code>css</code> 包含的图片<ul>
+<li>common.css             // 很多页面都会引用的公用样式</li>
+<li>…                            // 各个分页(包括 <code>index.html</code>)需要的独有 <code>css</code> 以及一些少数页面通用的 UI 模块 <code>css</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>js/<pre><code> - lib/            // 同 <span class="escape">`c</span>ss<span class="escape">`，</span>只是没有 <span class="escape">`i</span>mages/`
+</code></pre><ul>
+<li>common.js</li>
+</ul>
+</li>
+<li>img/                            // 系统生成或者需要展示的图片（其它多媒体文件以此为例）<ul>
+<li>…/                        // 可按系统模块划分图片文件夹</li>
+<li>…</li>
+</ul>
+</li>
+<li>A/                              // 角色 A 所在文件夹<ul>
+<li>a/              // 角色 A 下所包含的功能模块 a, a 下将有至少一个 HTML 页面，其只有一个 <code>data-role = &quot;page&quot;</code> 部分，页面对应的 <code>js</code> 将在页面最后引用。（移除 DOM 既能移除对应 <code>js</code> 运行结果，防止内存溢出，待）</li>
+<li>b/                            // …</li>
+<li>…</li>
+<li>a.html          // 角色 A 的主页，因为采取 <code>jqm</code> 默认页面转换与加载方式，所以除了库文件还将引用角色下所有页面的独有 <code>css</code> 以及 <code>common.css</code>。</li>
+</ul>
+</li>
+<li>index.html                 // 登录页面，依据登录用户的角色跳转(或者加载然后移除登录页面 DOM)至对应角色文件夹下的角色主页。</li>
+</ul>
+</blockquote>
+<h2 id="UI_Demo_（包含页面切换与跳转）">UI Demo （包含页面切换与跳转）</h2>
+<p><a href="http://demos.jquerymobile.com/1.4.5/" target="_blank" rel="external">官方 Demo</a></p>
+<h2 id="API">API</h2>
+<ul>
+<li>通用 CSS class <a href="http://api.jquerymobile.com/classes/" target="_blank" rel="external">汇总</a><br>，非通用部分见上面 Demo 的链接。</li>
+<li><a href="http://api.jquerymobile.com/global-config/" target="_blank" rel="external">修改</a> <code>jqm</code> 默认设置</li>
+<li><a href="http://api.jquerymobile.com/data-attribute/" target="_blank" rel="external">data-attribute</a></li>
+<li><a href="http://api.jquerymobile.com/category/widgets/" target="_blank" rel="external">wigets</a></li>
+<li><a href="http://api.jquerymobile.com/" target="_blank" rel="external">更多</a></li>
+</ul>
+<h2 id="常见问题以及解决方法">常见问题以及解决方法</h2>
+<ul>
+<li><a href="http://www.gajotres.net/most-common-jquery-mobile-problems-and-solutions/#comment-8953" target="_blank" rel="external">好博文</a></li>
+</ul>
+<h2 id="实用插件">实用插件</h2>
+<ul>
+<li><a href="http://www.gajotres.net/using-validation-plugin-with-jquery-mobile-1-4/" target="_blank" rel="external">验证插件</a></li>
+<li><a href="http://www.gajotres.net/10-life-saving-jquery-mobile-plugins/" target="_blank" rel="external">常用</a></li>
+<li><a href="http://www.gajotres.net/notable-less-known-jquery-mobile-plugins/" target="_blank" rel="external">非常用</a></li>
+</ul>
 
-        
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://chener.me/phonegap-develop/" data-id="jxworqhggvwwuawl" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://chener.me/jqm-develop/" data-id="i1lhmjeq61g1iu15" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
-        <a href="http://chener.me/phonegap-develop/#ds-thread" class="article-comment-link">评论</a>
+        <a href="http://chener.me/jqm-develop/#ds-thread" class="article-comment-link">评论</a>
       
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/phonegap/">phonegap</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquerymobile/">jquerymobile</a></li></ul>
 
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-set-android-studio-for-phonegap" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/set-android-studio-for-phonegap/" class="article-date">
-  <time datetime="2015-02-11T12:28:17.000Z" itemprop="datePublished">2月 11 2015</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程/">编程</a>►<a class="article-category-link" href="/categories/编程/准备/">准备</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/set-android-studio-for-phonegap/">搭建 Android Studio 上 Phonegap 开发环境（待）</a>
-    </h1>
+    <a href="/translate-jqm-tuts/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">经典 jQuery Mobile 教程（译）</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>工欲善其器，必先利其器。</p>
-
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://chener.me/set-android-studio-for-phonegap/" data-id="cvddzq84w1bgv477" class="article-share-link" data-share="baidu">分享到</a>
-      
-
-      
-        <a href="http://chener.me/set-android-studio-for-phonegap/#ds-thread" class="article-comment-link">评论</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/androidstudio/">androidstudio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/phonegap/">phonegap</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
 
-  
-  
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="jqm-develop/" data-title="jQuery Mobile 开发" data-url="http://chener.me/jqm-develop/"></div>
+  </section>
 </section>
       
       <aside id="sidebar">
