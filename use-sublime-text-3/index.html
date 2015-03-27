@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>使用 Sublime Text 3（待） | 陈二的世界</title>
+  <title>使用 Sublime Text 3 | 陈二的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="个人认为目前对新老手都是最好的入门编辑器。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 Sublime Text 3（待）">
+<meta property="og:title" content="使用 Sublime Text 3">
 <meta property="og:url" content="http://chener.me/use-sublime-text-3/">
 <meta property="og:site_name" content="陈二的世界">
 <meta property="og:description" content="个人认为目前对新老手都是最好的入门编辑器。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用 Sublime Text 3（待）">
+<meta name="twitter:title" content="使用 Sublime Text 3">
 <meta name="twitter:description" content="个人认为目前对新老手都是最好的入门编辑器。">
 
   
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      使用 Sublime Text 3（待）
+      使用 Sublime Text 3
     </h1>
   
 
@@ -97,10 +97,70 @@
 <h4 id="知识点">知识点</h4>
 <ul>
 <li><code>Project - Sava Project As ...</code> 就可以把整个项目文件夹保存为两个项目文件 <code>*.sublime-project</code> <code>*.subllime-workspace</code> 以后直接点击这两个文件就可以打开项目了。</li>
+<li>Console Palette (Shift + Cmd + P) 中可以快速模糊输入各种常用命令。</li>
+<li>(Cmd + P) 中可以快速切换项目/文件夹中所有文件，如前置输入@则可搜索当前页面的所有方法名。</li>
 </ul>
 <h4 id="工具配置">工具配置</h4>
+<p><a href="http://segmentfault.com/q/1010000000576859" target="_blank" rel="external">常用插件</a>以及必要补充：</p>
 <ul>
-<li><a href="http://segmentfault.com/q/1010000000576859" target="_blank" rel="external">常用插件</a></li>
+<li>Auto​File​Name<blockquote>
+<p>Pressing ctrl+space, will activate AutoFileName. One list of available files where be ready to select.<br>Looking for an even more automatic and seemless completion? Add the following to your User Settings file:</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight JSON"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">"auto_complete_triggers":</div><div class="line">[</div><div class="line">  {</div><div class="line">     "characters": "&lt;",</div><div class="line">     "selector": "text.html"</div><div class="line">  },</div><div class="line">  {</div><div class="line">     "characters": "/",</div><div class="line">     "selector": "string.quoted.double.html,string.quoted.single.html, source.css"</div><div class="line">  }</div><div class="line">]</div></pre></td></tr></table></figure>
+
+<blockquote>
+<p>With this, there’s no need to worry about pressing ctrl+space, autocompletion with appear upon pressing /.</p>
+</blockquote>
+<ul>
+<li>Better Completion<blockquote>
+<p>How to trigger completion hint when every typing?</p>
+<p>Open file Packages/User/Preferences.sublime-settings or click Setting - User from menu. In my case, I just setup the auto_complete_triggers property as follow:</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight JSON"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  "<span class="attribute">auto_complete_triggers</span>":</div><div class="line">  <span class="value">[</span></div><div class="line">    {</div><div class="line">      "<span class="attribute">characters</span>": <span class="value"><span class="string">"qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP"</span></span>,</div><div class="line">      "<span class="attribute">selector</span>": <span class="value"><span class="string">"text, source, meta, string, punctuation, constant"</span></span></div><div class="line">    }</div><div class="line">  ]</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<blockquote>
+<p>It will active most of scope triggers and most of characters.</p>
+</blockquote>
+<ul>
+<li><p>Bootstrap 3 snippets<br>全部以 <code>bs3-</code> 开头，可补全。详见<a href="https://packagecontrol.io/packages/Bootstrap%203%20Snippets" target="_blank" rel="external">这里</a>。</p>
+</li>
+<li><p>Comment-Snippets<br>全部以 <code>comm-</code> 开头，可补全。详见<a href="https://packagecontrol.io/packages/Comment-Snippets" target="_blank" rel="external">这里</a>。</p>
+</li>
+<li><p>DashDoc</p>
+<blockquote>
+<p>You can look up the word under the cursor or selected text in Dash using <code>ctrl+h</code>.</p>
+</blockquote>
+</li>
+<li><p>DictionaryAutoComplete</p>
+<blockquote>
+<p>This plug-in adds auto-completion entries from the dictionary file if you are typing inside comments, strings or in text files. Useful for very lazy typers like me or if you’re searching for a particular word.</p>
+<p>In a comment, string or text file, just type Ctrl + Space to show auto-completion.</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>Alternatively, you can add this entry to your ‘Settings - User’ to always show auto-completion, regardless where you’re typing:</p>
+</blockquote>
+<figure class="highlight JSON"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"auto_complete_selector": "source, text"</div></pre></td></tr></table></figure>
+
+<p>还可以更换字典，详见<a href="https://packagecontrol.io/packages/DictionaryAutoComplete" target="_blank" rel="external">这里</a></p>
+<ul>
+<li><p>DocBlockr<br>详见<a href="https://packagecontrol.io/packages/DocBlockr" target="_blank" rel="external">这里</a></p>
+</li>
+<li><p>Java​Script Snippets<br><code>fn (function)</code><br><code>afn (anonymous function)</code><br><code>ii (Immediately-invoked function expression)</code><br><code>cl (console.log)</code><br><code>sto (setTimeout)</code><br><code>sti (setInterval)</code><br><code>req (require)</code><br><code>okfe (Objects.keys and forEach)</code><br>更多请见<a href="https://packagecontrol.io/packages/JavaScript%20Snippets" target="_blank" rel="external">这里</a></p>
+</li>
+<li><p>HTMLBeautify<br>Mac OS X: Command-Option-Shift-F</p>
+</li>
+<li><p>jsFormat<br>With .js file, type <code>Format: JavaScript</code> in console palette (Shift + Cmd + P)。</p>
+</li>
+<li><p>j​Query Mobile 1.​4 Snippets<br><code>jqm</code>开头，可补全。</p>
+</li>
+<li><p>View in Browser<br>Ctrl + Alt + C (Chrome)</p>
+</li>
 </ul>
 
       
@@ -145,7 +205,7 @@
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="use-sublime-text-3/" data-title="使用 Sublime Text 3（待）" data-url="http://chener.me/use-sublime-text-3/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="use-sublime-text-3/" data-title="使用 Sublime Text 3" data-url="http://chener.me/use-sublime-text-3/"></div>
   </section>
 </section>
       
