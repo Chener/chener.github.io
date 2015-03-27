@@ -103,48 +103,30 @@
 <h4 id="工具配置">工具配置</h4>
 <p><a href="http://segmentfault.com/q/1010000000576859" target="_blank" rel="external">常用插件</a>以及必要补充：</p>
 <ul>
-<li>Auto​File​Name<blockquote>
-<p>Pressing ctrl+space, will activate AutoFileName. One list of available files where be ready to select.<br>Looking for an even more automatic and seemless completion? Add the following to your User Settings file:</p>
-</blockquote>
-</li>
+<li>Auto​File​Name<br>Pressing ctrl+space, will activate AutoFileName. One list of available files where be ready to select.<br>Looking for an even more automatic and seemless completion? Add the following to your User Settings file:</li>
 </ul>
 <figure class="highlight JSON"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">"auto_complete_triggers":</div><div class="line">[</div><div class="line">  {</div><div class="line">     "characters": "&lt;",</div><div class="line">     "selector": "text.html"</div><div class="line">  },</div><div class="line">  {</div><div class="line">     "characters": "/",</div><div class="line">     "selector": "string.quoted.double.html,string.quoted.single.html, source.css"</div><div class="line">  }</div><div class="line">]</div></pre></td></tr></table></figure>
 
-<blockquote>
 <p>With this, there’s no need to worry about pressing ctrl+space, autocompletion with appear upon pressing /.</p>
-</blockquote>
 <ul>
-<li>Better Completion<blockquote>
-<p>How to trigger completion hint when every typing?</p>
-<p>Open file Packages/User/Preferences.sublime-settings or click Setting - User from menu. In my case, I just setup the auto_complete_triggers property as follow:</p>
-</blockquote>
-</li>
+<li>Better Completion<br>How to trigger completion hint when every typing?</li>
 </ul>
+<p>Open file Packages/User/Preferences.sublime-settings or click Setting - User from menu. In my case, I just setup the auto_complete_triggers property as follow:</p>
 <figure class="highlight JSON"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  "<span class="attribute">auto_complete_triggers</span>":</div><div class="line">  <span class="value">[</span></div><div class="line">    {</div><div class="line">      "<span class="attribute">characters</span>": <span class="value"><span class="string">"qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP"</span></span>,</div><div class="line">      "<span class="attribute">selector</span>": <span class="value"><span class="string">"text, source, meta, string, punctuation, constant"</span></span></div><div class="line">    }</div><div class="line">  ]</div><div class="line">}</div></pre></td></tr></table></figure>
 
-<blockquote>
 <p>It will active most of scope triggers and most of characters.</p>
-</blockquote>
 <ul>
 <li><p>Bootstrap 3 snippets<br>全部以 <code>bs3-</code> 开头，可补全。详见<a href="https://packagecontrol.io/packages/Bootstrap%203%20Snippets" target="_blank" rel="external">这里</a>。</p>
 </li>
 <li><p>Comment-Snippets<br>全部以 <code>comm-</code> 开头，可补全。详见<a href="https://packagecontrol.io/packages/Comment-Snippets" target="_blank" rel="external">这里</a>。</p>
 </li>
-<li><p>DashDoc</p>
-<blockquote>
-<p>You can look up the word under the cursor or selected text in Dash using <code>ctrl+h</code>.</p>
-</blockquote>
+<li><p>DashDoc<br>You can look up the word under the cursor or selected text in Dash using <code>ctrl+h</code>.</p>
 </li>
-<li><p>DictionaryAutoComplete</p>
-<blockquote>
-<p>This plug-in adds auto-completion entries from the dictionary file if you are typing inside comments, strings or in text files. Useful for very lazy typers like me or if you’re searching for a particular word.</p>
-<p>In a comment, string or text file, just type Ctrl + Space to show auto-completion.</p>
-</blockquote>
+<li><p>DictionaryAutoComplete<br>最好不用，弊大于利！<br>This plug-in adds auto-completion entries from the dictionary file if you are typing inside comments, strings or in text files. Useful for very lazy typers like me or if you’re searching for a particular word.</p>
 </li>
 </ul>
-<blockquote>
+<p>In a comment, string or text file, just type Ctrl + Space to show auto-completion.</p>
 <p>Alternatively, you can add this entry to your ‘Settings - User’ to always show auto-completion, regardless where you’re typing:</p>
-</blockquote>
 <figure class="highlight JSON"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"auto_complete_selector": "source, text"</div></pre></td></tr></table></figure>
 
 <p>还可以更换字典，详见<a href="https://packagecontrol.io/packages/DictionaryAutoComplete" target="_blank" rel="external">这里</a></p>
